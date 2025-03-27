@@ -1,0 +1,167 @@
+@import url('https://fonts.googleapis.com/css2?family=League+Spartan:wght@100..900&display=swap');
+
+:root {
+    --basebackground: rgb(80,80,80);
+    --accentblue: rgb(89,107,200);
+}
+
+body, html {
+    font-family:'League Spartan', Arial, monospace;
+    font-size:18px;
+    background-color:var(--basebackground);
+    color:whitesmoke;
+    margin:0;
+    padding:0;
+}
+
+#container {
+    display:flex;
+    flex-direction: column;
+    justify-content:stretch;
+    overflow:auto;
+}
+
+.barrel {
+    padding:2vh 2vw;
+}
+
+#container > header.barrel {
+    padding: 1vh 2vw;
+}
+
+a {
+    color:cyan;
+    text-decoration: none;
+    transition: color 500ms;
+}
+a:hover {
+    color:blueviolet;
+}
+
+h1 {
+    font-size:2rem;
+    margin:0;
+    align-self:center;
+}
+
+button {
+    border: 1px solid var(--accentblue);
+    background-color: inherit;
+    color:whitesmoke;
+    padding:0.5vw;
+    cursor: pointer;
+    transition: background-color 500ms;
+}
+button:hover {
+    background-color:rgb(100,100,100);
+    border: 1px solid var(--accentblue);
+}
+button:active {
+    cursor:wait;
+}
+
+.hovertip {
+    color:cyan;
+    transition:background-color 500ms;
+}
+.hovertip:hover {
+    color:blueviolet;
+    transition:background-color 500ms;
+}
+
+#container > header {
+    background-color: rgb(100,100,100);
+    border-bottom: 2px solid var(--accentblue);
+    background-image: linear-gradient(to right, rgb(100,100,100) 70%, whitesmoke);
+    height:10vh;
+}
+
+#container > header section {
+    display:flex;
+    flex-flow: row nowrap;
+    gap:1vw;
+}
+
+#container > header span {
+    align-self: center;
+}
+
+#container > main {
+    height:72.6vh;
+}
+
+#container #content {
+    display:grid;
+    grid-template-columns: 1fr 4fr;
+    grid-template-rows: 1fr;
+    gap:10vw;
+}
+
+#container #content button {
+    height:7vh;
+    width:6vw;
+}
+
+#container #content header {
+    display:flex;
+    flex-direction:row;
+    justify-content:space-between;
+}
+
+#container #content header nav {
+    margin-top:2vh;
+}
+
+#container #content nav, #container #content section {
+    width:12vw;
+}
+
+#container #content header section ul {
+    display:flex;
+    flex-direction:row;
+    list-style:none;
+    gap:0.2vw;
+    margin-left:2vw;
+}
+
+.hovertip {
+    display:inline;
+}
+
+#container #content header summary {
+    width:6vw;
+    color:cyan;
+    transition:color 500ms;
+    font-size:1.2em;
+}
+#container #content header summary:hover {
+    cursor:pointer;
+    color:blueviolet;
+    transition:color 500ms;
+}
+
+#container #content header summary::marker {
+    color:var(--basebackground);
+    display:none;
+}
+
+#center {
+    background-color:white;
+    width:50vw;
+    height:72.6vh;
+    justify-self:end;
+    border:2px solid var(--accentblue);
+    overflow:auto;
+    color:black;
+}
+
+#container > footer {
+    height:7vh;
+    background-color: rgb(100,100,100);
+    background-image: linear-gradient(to left, rgb(100,100,100) 70%, whitesmoke);
+    border-top: 2px solid var(--accentblue);
+    overflow:hidden;
+    display:flex;
+    flex-direction: row;
+    justify-content: flex-end;
+}
