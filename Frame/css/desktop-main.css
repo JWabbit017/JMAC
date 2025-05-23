@@ -1,0 +1,241 @@
+@import url('https://fonts.googleapis.com/css2?family=League+Spartan:wght@100..900&display=swap');
+
+:root {
+    font-family: "League Spartan", Arial, monospace;
+    font-size:19px;
+    color:black;
+    margin:0;
+    padding:0;
+
+    --backgroundsuperlight: rgb(235,235,255);
+    --backgroundinterlight: rgb(210,210,245);
+    --backgroundlight: rgb(190,190,240);
+    --backgroundmain: rgb(160,160,210);
+    --backgrounddark: rgb(90,90,130);
+    --backgroundsuperdark: rgb(30,30,60);
+    --backgroundaccent: rgb(140, 140, 210);
+}
+
+body, html {
+    margin:0;
+    padding:0;
+    scroll-behavior:smooth;
+}
+
+h1, h2, h3, h4, h5, h6 {
+    margin:0;
+}
+
+.mono, .code {
+    font-size:17px;
+    font-family:monospace;
+    font-weight:normal;
+}
+
+.code {
+    color:cyan;
+}
+
+.comment {
+    color:var(--backgroundlight);
+    font-family:monospace;
+    margin:1vh 0vw;
+}
+
+.snippet {
+    background-color:var(--backgroundsuperdark);
+    width:auto;
+    padding-left:1vw;
+}
+
+#topbutton {
+    align-self:end;
+}
+
+a {
+    text-decoration:none;
+    transition: color 300ms;
+}
+
+a:hover {
+    color:cyan;
+    transition:color 300ms;
+}
+
+hr {
+    background-color: var(--backgroundaccent);
+    margin:0;
+}
+
+dt {
+    font-weight:500;
+    padding:8px;
+    color: var(--backgrounddark);
+}
+
+dd {
+    font-weight:400;
+}
+
+strong {
+    font-size:1.5em;
+    display:inline;
+    align-self:center;
+}
+
+ul {
+    list-style:none;
+}
+
+summary {
+    cursor:pointer;
+    padding:5px;
+    transition:background-color 200ms;
+}
+
+summary:hover {
+    background-color: var(--backgroundaccent);
+    transition:background-color 200ms;
+}
+
+summary::-webkit-details-marker {
+    display:none;
+}
+
+details ul {
+    background-color:var(--backgroundaccent);
+}
+
+details a {
+    background-color:var(--backgroundaccent);
+    display:inline-block;
+    padding:1vh;
+    width:10vw;
+}
+
+#container {
+    display:grid;
+    grid-template-columns: 1fr 5fr;
+    grid-template-rows: 1fr;
+    overflow:hidden;
+}
+
+#sidebar {
+    background-color: var(--backgroundmain);
+}
+
+#sidebar > header {
+    display:flex;
+    flex-direction:row;
+    justify-content:flex-start;
+    gap:1vw;
+    padding:1vh;
+    height:7.5vh;
+}
+
+#sidebar > header strong {
+    font-size:3em;
+    margin:0;
+    align-self:center;
+}
+
+#sidebar > header img {
+    align-self:center;
+    min-height:1vh;
+    width:auto;
+}
+
+#sidebar > footer {
+    text-align:center;
+    padding:1vh;
+    display:flex;
+    flex-direction:column;
+    justify-content:space-between;
+}
+
+#infobar span {
+    border-bottom:2px solid black;
+}
+
+main > header {
+    background-color: var(--backgroundlight);
+    padding:1vh 1vw;
+    height:7.5vh;
+    display:flex;
+    flex-direction:column;
+    justify-content:center;
+}
+
+main > header span, main > header h3 {
+    align-self:end;
+}
+
+main, main > section {
+    background-color: var(--backgroundsuperlight);
+}
+
+#intro {
+    display:flex;
+    flex-direction:column;
+    justify-content:center;
+    background-image: linear-gradient(to right, var(--backgroundinterlight) 20%, var(--backgroundsuperlight), var(--backgroundsuperlight));
+}
+
+#intro h3 {
+    font-size:2em;
+    align-self:start;
+}
+
+#intro span {
+    align-self:start;
+    margin-left:1vw;
+}
+
+#main {
+    overflow:auto;
+    scrollbar-width:thin;
+}
+
+#main hr, .inter {
+    width:15vw;
+}
+
+#main > #example h3, #main > #values h3 {
+    padding-left:1vw;
+}
+
+#main > #example, #main > #values {
+    padding:0;
+}
+
+#values h3, #log h3 {
+    margin-bottom:1.5vh;
+}
+
+#values .snippet {
+    padding-top:1.5vh;
+    padding-bottom:1.5vh;
+}
+
+#main > div, #intro {
+    padding:1vh 1vw;
+}
+
+#main > div {
+    margin:2.5vh 0vw;
+}
+
+#log > div {
+    display:flex;
+    flex-flow: row wrap;
+    flex-shrink:0;
+    justify-content:flex-start;
+    gap:1.5vw;
+}
+
+#log section {
+    border: 1px solid var(--backgrounddark);
+    width:20vw;
+    padding:1vw;
+    flex:1;
+}
